@@ -32,8 +32,11 @@ class MkDocsTitlePlugin(mkdocs.plugins.BasePlugin):
                 continue
 
             # Check if the line is a hash-style header
-            if re.match('^#{1,6} .*$', line):
-                return line.lstrip('# ')
+            if re.search('^#{1,6} .*$', line):
+                # If it is, extract the name from the line, excluding any markup that may be present.
+                print(line)
+                return re.match('^#{1,6} ([0-9a-zA-Z-_ ]+).*$', line).groups()[0]
+                # return line.lstrip('# ')
 
             # Finally, check for "setext" style headers, which are "underlined"
             # with either "=" or "-". To do that, we need to check the line
