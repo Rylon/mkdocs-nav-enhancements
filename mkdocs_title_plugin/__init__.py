@@ -35,12 +35,13 @@ class MkDocsTitlePlugin(mkdocs.plugins.BasePlugin):
             if re.search('^#{1,6} .*$', line):
                 # If it is, first we check if it has any markup after the title, such as image or text links
                 # so we can exclude those from the title.
-                matches = re.match('^#(.+?)\!?\[', line)
+                matches = re.match('^#{1,6} ?(.+?) ?\!?\[', line)
                 if matches:
                     return matches.groups()[0]
                 # Otherwise, we can just strip the # from the start.
                 else:
-                    return line.lstrip('# ')
+                    # return line.lstrip('# ')
+                    return re.sub('#{1,6} ', '', line)
 
             # Finally, check for "setext" style headers, which are "underlined"
             # with either "=" or "-". To do that, we need to check the line
