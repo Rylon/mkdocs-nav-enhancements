@@ -63,5 +63,6 @@ class MkDocsTitlePlugin(mkdocs.plugins.BasePlugin):
         return markdown
 
     def on_nav(self, nav, config, files, **kwargs):
+        # TODO: Re-sort these alphabetically after sorting.
         nav.items = self._process_nav_items_recursive(nav)
         return nav
