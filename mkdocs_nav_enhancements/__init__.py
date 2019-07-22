@@ -56,9 +56,11 @@ class MkDocsNavEnhancements(mkdocs.plugins.BasePlugin):
         """
         For a given block of Markdown, searches for the first title that matches the following:
 
-        1. The first 'hash-style' header, which is a line beginning with between 1 to 6 '#'.
+        1. The first 'atx-style' header, which is a line beginning with between 1 to 6 '#'.
         2. The first 'setext-style' header, which is a line where the line immediately after contains
            only '=' or '-'.
+
+        https://daringfireball.net/projects/markdown/syntax#header
 
         If either of those are found, it will attempt to extract the title text from any other markup
         that might be in the title, for example image or link markup, which would otherwise be rendered
@@ -77,7 +79,7 @@ class MkDocsNavEnhancements(mkdocs.plugins.BasePlugin):
             if not line.strip():
                 continue
 
-            # Check if the line is a hash-style header
+            # Check if the line is a atx-style header
             if re.search('^#{1,6} .*$', line):
                 # If it is, first we check if it has any markup after the title, such as image or text links
                 # so we can exclude those from the title.
