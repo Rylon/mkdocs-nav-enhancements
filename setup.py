@@ -1,14 +1,19 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
-    name='mkdocs-title-plugin',
-    version='0.1',
-    description='',
+    name='mkdocs-nav-enhancements',
+    version='0.9.0',
     author='Ryan Conway',
-    author_email='',
+    author_email='ryan@rjc.cc',
+    description='Enhancements',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/rylon/mkdocs-nav-enhancements",
     license='MIT',
-    packages=['mkdocs_title_plugin'],
+    packages=find_packages(),
     install_requires=[
         "mkdocs>=1"
     ],
@@ -16,7 +21,15 @@ setup(
     zip_safe=False,
     entry_points={
         'mkdocs.plugins': [
-            'mkdocs-title-plugin = mkdocs_title_plugin:MkDocsTitlePlugin'
+            'mkdocs-nav-enhancements = mkdocs_nav_enhancements:MkDocsNavEnhancements'
         ]
-    }
+    },
+    classifiers=[
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Intended Audience :: Developers",
+        "Topic :: Documentation"
+    ],
 )

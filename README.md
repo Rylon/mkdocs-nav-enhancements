@@ -1,3 +1,3 @@
-# MkDocs Title Plugin
+# MkDocsNavEnhancements
 
 WIP

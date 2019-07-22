@@ -3,7 +3,7 @@ import re
 import os
 
 
-class MkDocsTitlePlugin(mkdocs.plugins.BasePlugin):
+class MkDocsNavEnhancements(mkdocs.plugins.BasePlugin):
     # Options would go here.
     config_scheme = (
     )
