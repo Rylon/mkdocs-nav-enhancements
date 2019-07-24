@@ -2,7 +2,7 @@
 
 This is a small plugin for the excellent [MkDocs](https://www.mkdocs.org) project which makes some enhancements to the navigation.
 
-![PyPI](https://img.shields.io/pypi/v/mkdocs-nav-enhancements.svg?color=blue&style=for-the-badge)
+[![PyPI](https://img.shields.io/pypi/v/mkdocs-nav-enhancements.svg?color=blue&style=for-the-badge)](https://pypi.org/project/mkdocs-nav-enhancements/)
 
 ## Features
 
