@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setup(
     name='mkdocs-nav-enhancements',
-    version='0.9.0',
+    version='0.9.1',
     author='Ryan Conway',
     author_email='ryan@rjc.cc',
     description='This is a small plugin for the excellent MkDocs project which makes some enhancements to the navigation.',
